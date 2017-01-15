@@ -3,7 +3,7 @@ This repository contains installer scripts for the binary distribution of the Py
 
 The binary Python modules as well as required shared libaries for the plattforms are contained in the DIST folder.
 
-Please note on Windows we only support 32bit Python 3.4 natively with this module.  If you have Win 10 you can use a 64bit environment via the Bash for Windows feature as described in this stockoverflow thread (https://goo.gl/8nb52R). At the time of writing this feature is no longer restricted by MS to developer previews. (To enable it see these instructions: goo.gl/a1b7vK).
+Please note on Windows we only support 32bit Python 3.4 natively with this module.  If you have Win 10 you can use a 64bit environment via the Bash for Windows feature as described in this stockoverflow thread (https://goo.gl/LKSNmd). At the time of writing this feature is no longer restricted by MS to developer previews. (To enable it see these instructions: goo.gl/a1b7vK).
 
 On the UNIX based plattforms we only support and tested the modules with the, as of writting, current Python 3 Anaconda 64bit distribution i.e. Python 3.5.2 |Anaconda 4.2.0 (x86_64). Although we noticed the module also loads with earlier 64bit Anaconda Python 3 versions.
 
