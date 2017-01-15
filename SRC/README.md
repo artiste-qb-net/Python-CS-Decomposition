@@ -1,4 +1,4 @@
-Compiling a wrapper with f2py especially on Windows is a non-trivial task, and a journey of trial and error.  I captured some of my eperiences in an answer to this stockoverflow question: https://goo.gl/xir12b
+Compiling a wrapper with *f2py* especially on Windows is a non-trivial task, and a journey of trial and error.  I captured some of my eperiences in an answer to this stockoverflow question: https://goo.gl/xir12b
 
 A good description of how to work with f2py can be found at https://sysbio.ioc.ee/projects/f2py2e/usersguide/
 
