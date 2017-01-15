@@ -1,7 +1,7 @@
 # Python-CS-Decomposition
 This repository contains installer scripts for the binary distribution of the Python CS Decomposition module as well as build instructions.
 
-The binary Python module as well as required shared libaries for the plattforms are contained in the DIST folder.
+The binary Python modules as well as required shared libaries for the plattforms are contained in the DIST folder.
 
 Please note on Windows we only support 32bit Python 3.4 natively with this module.  If you have Win 10 you cam use a 64bit environment via the Bash for Windows feature as described in this stockoverflow thread (https://goo.gl/8nb52R). At the time of writing this feature is no longer restricted by MS to developers. (To enable it see these instructions: goo.gl/a1b7vK).
 
