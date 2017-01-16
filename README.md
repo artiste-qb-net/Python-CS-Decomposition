@@ -21,7 +21,7 @@ The binary Python modules, required shared libraries for the platforms, and the 
 
 For the purpose of [artiste-qb.net](http://artiste-qb.net) we only require CS decompositions with square submatrices. I.e. Q=P, M=2P, R=P
 
-We compiled a sub-module for this special case with is included in the SQ folder.  I.e. if you want to use this less general CS decomposition, you can import it via SQ.cuncsd in Python after a successfull installation of this module. 
+We compiled a sub-module for this special case which is included in the SQ folder.  I.e. if you want to use this less general CS decomposition, you can import it via SQ.cuncsd in Python after a successfull installation of this module. 
 ```python
 >>> import SQ.cuncsd 
 >>> print(SQ.cuncsd.__doc__)
