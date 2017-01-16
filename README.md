@@ -39,11 +39,11 @@ If you get write errors when executing this script check if you have write acces
 ```
 The istall script will abort if it cannot detect a Python 3.5.2 |Anaconda 4.2.0 (x86_64) environment.
 
-Although unsupported and untested, it seems the module can be used with earlier Python 3 versions.  In this case you can try to copy the cuncsd-* module and contents of the lib folder to a location that is on your python path. Please refer to the [Python documentation](https://docs.python.org/3/library/sys.html#sys.path) to learn how this Path is set and determined.  
+Although unsupported and untested, it seems the module can be used with earlier Python 3 versions.  In this case you can try to copy the _cuncsd-*_ module and contents of the lib folder to a location that is on your python path. Please refer to the [Python documentation](https://docs.python.org/3/library/sys.html#sys.path) to learn how this Path is set and determined.  
 
 ### Windows
 
-Please note on Windows we only support 32bit Python 3.4 natively with this module.  If you have Win 10 you can use a 64bit environment via the Bash for Windows feature as described in [this stackoverflow thread](https://goo.gl/LKSNmd). At the time of writing this feature is no longer restricted by MS to developer previews. ([To enable it see these instructions](https://goo.gl/a1b7vK)).
+Please note, on Windows we only support 32bit Python 3.4 natively with this module.  If you have Win 10 you can use a 64bit environment via the Bash for Windows feature as described in [this stackoverflow thread](https://goo.gl/LKSNmd). At the time of writing this feature is no longer restricted by MS to developer previews. ([To enable it see these instructions](https://goo.gl/a1b7vK)).
 
 ### License Disclaimer
 
