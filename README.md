@@ -74,9 +74,9 @@ bash-3.2$
 ```
 ### Windows
 
-Please note, on Windows we only support 32bit Python 3.4 natively with this module.  If you have Win 10 you can use a 64bit environment via the Bash for Windows feature as described in [this stackoverflow thread](https://goo.gl/LKSNmd). At the time of writing this feature is no longer restricted by MS to developer previews. ([To enable it see these instructions](https://goo.gl/a1b7vK)). If you install the current 64bit Anaconda distribution for Linux into this environment, then you can use the Linux install script to deploy the cuncsd module.
+Please note, on Windows we only support 32bit Python 3.4 natively with this module.  If you have Win 10 you can use a 64bit environment via the Bash for Windows feature as described in [this stackoverflow thread](https://goo.gl/LKSNmd). At the time of writing this feature is no longer restricted by MS to developer previews. (To enable it see [these instructions](https://goo.gl/a1b7vK)). If you install the current 64bit Anaconda distribution for Linux into this environment, then you can use the Linux install script to deploy the cuncsd module.
 
-Due to limited compile support from Microsoft 32bit native Windows modules can only be build for older Python version. No recent Anaconda distribution will work with this module.  Rather the newest version that we were able to compile for was [Python 3.4.4](https://www.python.org/ftp/python/3.4.4/python-3.4.4.msi) (v3.4.4:737efcadf5a6, Dec 20 2015, 19:28:18) [MSC v.1600 32 bit (Intel)] for win32.
+Due to limited compile support from Microsoft, 32bit native Windows modules can only be build for older Python versions. No recent Anaconda distribution will work with our modules.  Rather the newest version that we were able to compile for was [Python 3.4.4](https://www.python.org/ftp/python/3.4.4/python-3.4.4.msi) (v3.4.4:737efcadf5a6, Dec 20 2015, 19:28:18) [MSC v.1600 32 bit (Intel)] for win32.
 
 ## Troubleshooting and Requirements
 
