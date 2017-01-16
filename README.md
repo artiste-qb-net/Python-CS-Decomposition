@@ -56,7 +56,7 @@ bash-3.2$
 
 ### UNIX like systems
 
-The install script will exit with the following errors if it cannot execute *conda-env list* to check for python environments. This can happen even if you have a working Python environment, if no path to Anaconda binaries has been added to the $PATH variable. In this case adding it to the $PATH manualy will rectify the problem:
+The install script will exit with the following errors if it cannot execute *conda-env list* to check for python environments. This can happen even if you have a working Python environment, if no path to Anaconda exectables have been added to the $PATH variable. In this case adding it to $PATH manualy will rectify the problem:
 
 ```bash
 > bash-3.2$ export PATH=/Users/quax/anaconda/bin/:$PATH 
