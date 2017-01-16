@@ -1,3 +1,14 @@
+# Windows registry path we will probe for default install folder
+$regPath = @("Microsoft", "Windows", "CurrentVersion", "App Paths", "Python.exe")  
+ 
+$computername=$PC.NameOfComputer  
+ 
+# Branch of the Registry  
+$Branch='LocalMachine'  
+ 
+# Main Sub Branch you need to open  
+$SubBranch="SOFTWARE\\"
+
 $SucessMsg="Found Default Value For Python Install Path: "  
 
 function checkForRegPath ($registry, $SubBranch, $regPathArr, $ReturnKey)
@@ -41,5 +52,7 @@ if ( $Correct -eq "n" )
 {
     $DefaultVal = Read-Host -Prompt 'Please enter the correct Python install path'
 }
-copy lib/* $DefaultVal/DLLS
-copy cuncsd.pyd $DefaultVal/DLLS
+WRITE-HOST "Executing: copy lib\*" $DefaultVal"\DLLS"  
+copy lib\* $DefaultVal\DLLS
+WRITE-HOST "Executing: copy cuncsd.pyd" $DefaultVal"\DLLS" 
+copy cuncsd.pyd $DefaultVal\DLLS
