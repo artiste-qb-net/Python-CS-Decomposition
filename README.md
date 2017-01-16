@@ -78,8 +78,8 @@ Please note, on Windows we only support 32bit Python 3.4 natively with this modu
 
 Due to limited compile support from Microsoft, 32bit native Windows modules can only be build for older Python versions. No recent Anaconda distribution will work with our modules.  Rather the newest version that we were able to compile for was [Python 3.4.4](https://www.python.org/ftp/python/3.4.4/python-3.4.4.msi) (v3.4.4:737efcadf5a6, Dec 20 2015, 19:28:18) [MSC v.1600 32 bit (Intel)] for win32.
 
-You can start the installation by double clicking on the batch file and a Window should open that prompts you to confirm or enter a path:
-```batch
+You can start the installation by double clicking on the Install_Py_Module.bat batch file and a Window will open that prompts you to confirm or enter a path:
+```
 C:\Projects\cuncsd-install-script>powershell -ExecutionPolicy ByPass -File .\Install_Py_Module.ps1   & pause
 Found Default Value For Python Install Path:  C:\Python34
 Is this the correct Python install path? [y,n]: n
@@ -88,6 +88,8 @@ Executing: copy lib\* C:\Python34_4\DLLS
 Executing: copy cuncsd.pyd* C:\Python34_4\DLLS
 Press any key to continue . . .
 ```
+This script is not very sophisticated, and performs a straight copy based on the path without any further checks.
+
 ## Troubleshooting and Requirements
 
 ### UNIX like systems
@@ -103,7 +105,20 @@ If you get write errors when executing this script check if you have write acces
 ```
 The install script will abort if it cannot detect **the required Python 3.5.2 |Anaconda 4.2.0 (x86_64) environment***.
 
-Although unsupported and untested, it seems the module can be used with earlier Python 3 versions.  In this case you can try to copy the _cuncsd-*_ module and contents of the lib folder to a location that is on your python path. Please refer to the [Python documentation](https://docs.python.org/3/library/sys.html#sys.path) to learn how this Path is set and determined.  
+Although unsupported and untested, it seems the module can be used with earlier Python 3 versions.  In this case you can try to copy the _cuncsd-*_ module and contents of the lib folder to a location that is on your python path. Please refer to the [Python documentation](https://docs.python.org/3/library/sys.html#sys.path) to learn how this Path is set and determined.
+
+### Windows
+
+You will see errors like the following if you enter an non existing install path:
+```
+copy : Could not find a part of the path 'C:\to_nowhere\DLLS'.
+At C:\Projects\cuncsd-install-script\Install_Py_Module.ps1:66 char:1
++ copy lib\* $DefaultVal\DLLS
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:) [Copy-Item], DirectoryNotFoundException
+    + FullyQualifiedErrorId : System.IO.DirectoryNotFoundException,Microsoft.PowerShell.Commands.CopyItemCommand
+```
+You will also encounter a copy failure if you don't have write access to the python install folder, in which case you should try to run the batch file as administrator or adjust the folders permissions.
 
 ## License Disclaimer
 
