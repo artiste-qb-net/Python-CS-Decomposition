@@ -1,6 +1,22 @@
 # Python-CS-Decomposition
-This repository contains installer scripts for the binary distribution of the Python CS Decomposition module, as well as build instructions.
+This repository contains installer scripts for the binary distribution of the Python CS Decomposition module as contained in LAPACK 3.7.0, as well as build instructions.
 
+As described in the netlib.org documentation the _cuncsd_ module computes the CS decomposition of an M-by-M partitioned unitary matrix X:
+```
+
+                                 [  I  0  0 |  0  0  0 ]
+                                 [  0  C  0 |  0 -S  0 ]
+     [ X11 | X12 ]   [ U1 |    ] [  0  0  0 |  0  0 -I ] [ V1 |    ]**H
+ X = [-----------] = [---------] [---------------------] [---------]   .
+     [ X21 | X22 ]   [    | U2 ] [  0  0  0 |  I  0  0 ] [    | V2 ]
+                                 [  0  S  0 |  0  C  0 ]
+                                 [  0  0  I |  0  0  0 ]
+
+ X11 is P-by-Q. The unitary matrices U1, U2, V1, and V2 are P-by-P,
+ (M-P)-by-(M-P), Q-by-Q, and (M-Q)-by-(M-Q), respectively. C and S are
+ R-by-R nonnegative diagonal matrices satisfying C^2 + S^2 = I, in
+ which R = MIN(P,M-P,Q,M-Q).
+```
 The binary Python modules, required shared libraries for the platforms, and the install scripts are contained in the _DIST_ folder.
 
 To install the module you can simply clone this repository, go to the _DIST_ folder that corresponds to your OS and execute the install script:
