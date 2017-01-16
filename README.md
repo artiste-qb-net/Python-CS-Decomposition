@@ -23,12 +23,18 @@ For the purpose of [artiste-qb.net](http://artiste-qb.net) we only require CS de
 
 We compiled a sub-module for this special case which is included in the *SQ* folder.  I.e. if you want to use this less general CS decomposition, you can import it via _SQ.cuncsd_ in Python after a successfull installation of this module. 
 ```python
->>> import SQ.cuncsd 
->>> print(SQ.cuncsd.__doc__)
+>>> import SQ.cuncsd as csd
+>>> print(csd.__doc__)
 This module 'cuncsd' is auto-generated with f2py (version:2).
 Functions:
-  x11,x12,x21,x22,theta,u1,u2,v1t,v2t,work,rwork,iwork,info = cuncsd(m,p,q,x11,ldx11,x12,ldx12,x21,ldx21,x22,ldx22,ldu1,ldu2,ldv1t,ldv2t,lwork,lrwork,jobu1='Y',jobu2='Y',jobv1t='Y',jobv2t='Y',trans='T',signs='O',credit=0)
+  x11,x12,x21,x22,theta,u1,u2,v1t,v2t,work,rwork,iwork,info = cuncsd(p,x11,x12,x21,x22,lwork,lrwork,jobu1='Y',jobu2='Y',jobv1t='Y',jobv2t='Y',trans='T',signs='O',credit=0)
 .
+...
+# It can be invoked like this:
+            x11, x12, x21, x22, theta, u1, u2, v1t, v2t,\
+                work, rwork, iwork, info =\
+                    csd.cuncsd(p, x11, x12, x21, x22, lwork=lw, lrwork=lrw,
+                                  trans='F', credit=1)
 ```
 Otherwise you have the full range of parameters available with the general module: 
 ```python
@@ -39,7 +45,7 @@ Functions:
   x11,x12,x21,x22,theta,u1,u2,v1t,v2t,work,rwork,iwork,info = cuncsd(m,p,q,x11,ldx11,x12,ldx12,x21,ldx21,x22,ldx22,ldu1,ldu2,ldv1t,ldv2t,lwork,lrwork,jobu1='Y',jobu2='Y',jobv1t='Y',jobv2t='Y',trans='T',signs='O',credit=0)
 .
 ```
-Please note that it only has been tested to import error free, not functionally tested like the SQ one, as we only required the latter for our [Qubiter project](https://github.com/artiste-qb-net/qubiter)
+Please note that it only has been tested to import error free, but has not been functionally tested like the SQ one, as we only required the latter for our [Qubiter project](https://github.com/artiste-qb-net/qubiter)
 
 ## Installation
 We plan to bundle this module into a Conda package, but for the time being, the installation is script driven.
