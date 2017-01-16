@@ -11,26 +11,26 @@ python module cuncsd ! in
             character optional,intent(in) :: jobv2t='Y'
             character optional,intent(in) :: trans='T'
             character optional,intent(in) :: signs='O'
-            integer optional,intent(in), depend(p):: m=2*p
+            integer optional,intent(hide), depend(p):: m=2*p
             integer intent(in) :: p
-            integer optional,intent(in), depend(p):: q=p
+            integer optional,intent(hide), depend(p):: q=p
             complex dimension(p,p),intent(in,out), depend(p) :: x11
-            integer optional,depend(p) :: ldx11=p
+            integer optional,intent(hide),depend(p) :: ldx11=p
             complex dimension(p,p),intent(in,out), depend(p) :: x12
-            integer optional,depend(p) :: ldx12=p
+            integer optional,intent(hide),depend(p) :: ldx12=p
             complex dimension(p,p),intent(in,out), depend(p) :: x21
-            integer optional,depend(p) :: ldx21=p
+            integer optional,intent(hide),depend(p) :: ldx21=p
             complex dimension(p,p),intent(in,out), depend(p) :: x22
-            integer optional,depend(p) :: ldx22=p
+            integer optional,intent(hide),depend(p) :: ldx22=p
             real dimension(p),intent(out),depend(p) :: theta
             complex dimension(p,p),intent(out),depend(p) :: u1
-            integer optional,depend(p) :: ldu1=p
+            integer optional,intent(hide),depend(p) :: ldu1=p
             complex dimension(p,p),intent(out),depend(p) :: u2
-            integer optional,depend(p) :: ldu2=p
+            integer optional,intent(hide),depend(p) :: ldu2=p
             complex dimension(p,p),intent(out),depend(p) :: v1t
-            integer optional,depend(p) :: ldv1t=p
+            integer optional,intent(hide),depend(p) :: ldv1t=p
             complex dimension(p,p),intent(out),depend(p) :: v2t
-            integer optional,depend(p) :: ldv2t=p
+            integer optional,intent(hide),depend(p) :: ldv2t=p
             complex dimension(abs(lwork)),intent(out),depend(lwork) :: work
             integer intent(in) :: lwork
             real dimension(abs(lrwork)),intent(out),depend(lrwork) :: rwork
