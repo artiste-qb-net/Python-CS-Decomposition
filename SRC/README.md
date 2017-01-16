@@ -2,7 +2,7 @@ Compiling a wrapper with *f2py* especially on Windows is a non-trivial task, and
 
 A good description of how to work with f2py can be found at [this user guide.](https://sysbio.ioc.ee/projects/f2py2e/usersguide)
 
-For this build we use what is described as option 2 in this guide (the "smart" way). For FORTRAN code as complex as a typical LAPACK function the "quick" way without a signature file cannot work, and the "quick and smart" way would require a lot of patching of the original LAPAC code, which we wanted to keep to a minimum. 
+For this build we use what is described as option 2 in the guide (the "smart" way). For FORTRAN code as complex as a typical LAPACK function the "quick" way without a signature file cannot work, and the "quick and smart" way would require a lot of patching of the original LAPAC code, which we wanted to keep to a minimum. 
 
 A f2py compile statement then looked like this (in this case for OSX):
 ```bash
