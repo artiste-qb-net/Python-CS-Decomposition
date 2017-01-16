@@ -31,10 +31,8 @@ Functions:
 .
 ...
 # It can be invoked like this:
-            x11, x12, x21, x22, theta, u1, u2, v1t, v2t,\
-                work, rwork, iwork, info =\
-                    csd.cuncsd(p, x11, x12, x21, x22, lwork=lw, lrwork=lrw,
-                                  trans='F', credit=1)
+            x11, x12, x21, x22, theta, u1, u2, v1t, v2t, work, rwork, iwork, info =\
+                    csd.cuncsd(p, x11, x12, x21, x22, lwork=lw, lrwork=lrw, trans='F', credit=1)
 ```
 Otherwise you have the full range of parameters available with the general module: 
 ```python
