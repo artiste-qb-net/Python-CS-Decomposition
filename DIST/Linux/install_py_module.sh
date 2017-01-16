@@ -29,7 +29,6 @@ read -p "Found Anaconda Python install path '$CondaPath'. Is this correct? [Y|n]
 echo    # (optional) move to a new line
 if [[ ! $REPLY =~ ^[Nn]$ ]];
 then
-    echo $CondaPath
     if [ -d "$CondaPath/bin" ]; then
 	# Control will enter here if $DIRECTORY exists.
 	echo "Confirmed Python '$CondaPath/bin' directory."
