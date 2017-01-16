@@ -17,7 +17,7 @@ As described in the netlib.org documentation the _cuncsd_ module computes the CS
  R-by-R nonnegative diagonal matrices satisfying C^2 + S^2 = I, in
  which R = MIN(P,M-P,Q,M-Q).
 ```
-The binary Python modules, required shared libraries for the platforms, and the install scripts are contained in the _DIST_ folder.
+The binary Python modules, the required shared libraries for the various OS platforms, and the install scripts are contained in the _DIST_ folder.
 
 For the purpose of [artiste-qb.net](http://artiste-qb.net) we only require CS decompositions with square submatrices. I.e. Q=P, M=2P, R=P
 
