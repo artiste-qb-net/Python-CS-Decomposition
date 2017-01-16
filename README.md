@@ -1,5 +1,5 @@
 # Python-CS-Decomposition
-This repository contains installer scripts for the binary distribution of the Python CS Decomposition module as contained in [LAPACK 3.7.0](http://https://goo.gl/z2Nzvi), as well as build instructions.
+This repository contains installer scripts for the binary distribution of the Python CS Decomposition module as contained in [LAPACK 3.7.0](https://goo.gl/z2Nzvi), as well as build instructions.
 
 As described in the netlib.org documentation the _cuncsd_ module computes the CS decomposition of an M-by-M partitioned unitary matrix X:
 ```
