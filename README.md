@@ -99,7 +99,7 @@ The install script will exit with the following errors if it cannot execute *con
 ```bash
 > bash-3.2$ export PATH=/Users/quax/anaconda/bin/:$PATH 
 ```
-If you get write errors when executing this script check if you have write access to your Anaconda install path. If your Python environment was installed globally for all users on your machine you will need to execute the install script as superuser:
+If you get write errors when executing this script check the permissions on your Anaconda Python install path. If your Python environment was installed globally for all users on your machine, you will need to execute the install script as superuser:
 ```bash
 >bash-3.2$ sudo ./install_py_module.sh 
 ```
