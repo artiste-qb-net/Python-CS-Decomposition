@@ -4,26 +4,26 @@ This repository contains installer scripts for the binary distribution of the Py
 The binary Python modules as well as required shared libraries for the platforms, and the install scripts are contained in the DIST folder.
 
 To install the module you can simply clone this repository, go to the DIST folder that corresponds to your OS and execute the install script:
+```bash
+bash-3.2$ cd /tmp
+bash-3.2$ git clone https://github.com/artiste-qb-net/Python-CS-Decomposition.git
+Cloning into 'Python-CS-Decomposition'...
+remote: Counting objects: 105, done.
+remote: Compressing objects: 100% (92/92), done.
+remote: Total 105 (delta 41), reused 55 (delta 11), pack-reused 0
+Receiving objects: 100% (105/105), 8.55 MiB | 259.00 KiB/s, done.
+Resolving deltas: 100% (41/41), done.
+bash-3.2$ cd Python-CS-Decomposition/DIST/OSX
+bash-3.2$ ./install_py_module.sh 
+Found Anaconda Python install path '/Users/quax/anaconda'. Is this correct? [Y|n]
 
->bash-3.2$ cd /tmp
->bash-3.2$ git clone https://github.com/artiste-qb-net/Python-CS-Decomposition.git
->Cloning into 'Python-CS-Decomposition'...
->remote: Counting objects: 105, done.
->remote: Compressing objects: 100% (92/92), done.
->remote: Total 105 (delta 41), reused 55 (delta 11), pack-reused 0
->Receiving objects: 100% (105/105), 8.55 MiB | 259.00 KiB/s, done.
->Resolving deltas: 100% (41/41), done.
->bash-3.2$ cd Python-CS-Decomposition/DIST/OSX
->bash-3.2$ ./install_py_module.sh 
->Found Anaconda Python install path '/Users/quax/anaconda'. Is this correct? [Y|n]
->
->Confirmed Python '/Users/quax/anaconda/bin' directory.
->Confirmed Python '/Users/quax/anaconda/lib' directory.
->Found matching Python 3.5.2 .
->Confirmed that /Users/quax/anaconda/lib/python3.5 is writeable.
->**** Successfully installed the cuncsd module to /Users/quax/anaconda/lib/python3.5 ****
->bash-3.2$ 
-
+Confirmed Python '/Users/quax/anaconda/bin' directory.
+Confirmed Python '/Users/quax/anaconda/lib' directory.
+Found matching Python 3.5.2 .
+Confirmed that /Users/quax/anaconda/lib/python3.5 is writeable.
+**** Successfully installed the cuncsd module to /Users/quax/anaconda/lib/python3.5 ****
+bash-3.2$ 
+```
 ## Troubleshooting and Requirements
 
 ### UNIX like systems
