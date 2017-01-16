@@ -73,6 +73,6 @@ Although unsupported and untested, it seems the module can be used with earlier 
 
 Please note, on Windows we only support 32bit Python 3.4 natively with this module.  If you have Win 10 you can use a 64bit environment via the Bash for Windows feature as described in [this stackoverflow thread](https://goo.gl/LKSNmd). At the time of writing this feature is no longer restricted by MS to developer previews. ([To enable it see these instructions](https://goo.gl/a1b7vK)).
 
-### License Disclaimer
+## License Disclaimer
 
 Please note, the included Fortran files originated with [the LAPACK project](http://www.netlib.org/lapack/) (v3.7.0) and are governed by the license given in the LAPACK_license.txt file.
