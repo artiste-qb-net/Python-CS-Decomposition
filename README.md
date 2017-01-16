@@ -12,10 +12,10 @@ As described in the netlib.org documentation the _cuncsd_ module computes the CS
                                  [  0  S  0 |  0  C  0 ]
                                  [  0  0  I |  0  0  0 ]
 
- X11 is P-by-Q. The unitary matrices U1, U2, V1, and V2 are P-by-P,
+ *X11 is P-by-Q. The unitary matrices U1, U2, V1, and V2 are P-by-P,
  (M-P)-by-(M-P), Q-by-Q, and (M-Q)-by-(M-Q), respectively. C and S are
  R-by-R nonnegative diagonal matrices satisfying C^2 + S^2 = I, in
- which R = MIN(P,M-P,Q,M-Q).
+ which R = MIN(P,M-P,Q,M-Q).*
 ```
 The binary Python modules, required shared libraries for the platforms, and the install scripts are contained in the _DIST_ folder.
 
