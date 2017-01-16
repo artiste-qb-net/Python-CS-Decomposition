@@ -43,7 +43,7 @@ Functions:
   x11,x12,x21,x22,theta,u1,u2,v1t,v2t,work,rwork,iwork,info = cuncsd(m,p,q,x11,ldx11,x12,ldx12,x21,ldx21,x22,ldx22,ldu1,ldu2,ldv1t,ldv2t,lwork,lrwork,jobu1='Y',jobu2='Y',jobv1t='Y',jobv2t='Y',trans='T',signs='O',credit=0)
 .
 ```
-Please note that it only has been tested to import error free, but has not been functionally tested like the SQ one, as we only required the latter for our [Qubiter project](https://github.com/artiste-qb-net/qubiter)
+Please note that this version has only been tested to import error free, but has not been functionally tested like the SQ one, as we only required the latter for our [Qubiter project](https://github.com/artiste-qb-net/qubiter)
 
 ## Installation
 We plan to bundle this module into a Conda package, but for the time being, the installation is script driven.
