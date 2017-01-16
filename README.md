@@ -19,7 +19,19 @@ As described in the netlib.org documentation the _cuncsd_ module computes the CS
 ```
 The binary Python modules, required shared libraries for the platforms, and the install scripts are contained in the _DIST_ folder.
 
-To install the module you can simply clone this repository, go to the _DIST_ folder that corresponds to your OS and execute the install script:
+For the purpose of [artiste-qb.net](http://artiste-qb.net) we only require CS decompositions with square submatrices. I.e. Q=P, M=2P.R=P
+
+We compiled a sub-module for this special case with is included in the SQ folder.  I.e. if you want to use this less general CS decomposition, you can import it via SQ.cuncsd in Python after a successfull installation of this module. 
+```python
+>>> import SQ.cuncsd
+```
+## Installation
+We plan to bundle this module into a Conda package, but for the time being, the installation is script driven.
+
+To install the module you simply clone this repository, go to the _DIST_ folder that corresponds to your OS and execute the install script.
+
+### UNIX like systems
+
 ```bash
 bash-3.2$ cd /tmp
 bash-3.2$ git clone https://github.com/artiste-qb-net/Python-CS-Decomposition.git
