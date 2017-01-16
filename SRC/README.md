@@ -6,5 +6,15 @@ For this build we use what is described as option 2 in this guide (the "smart" w
 
 A f2py compile statement then looked like this (in this case for OSX):
 ```bash
-f2py -c cuncsd.pyf cuncsd.f -L../.. -llapack -lblaslib -ltmglib 
+f2py -c cuncsd.pyf cuncsd.f -L/home/quax/Projects/lapack-3.7.0 -llapack -lblaslib -ltmglib 
+```
+The -L flag tells the compiler where to find the lapack, blaslib and tmglib libraries.  On OSX it was required to compile these from [the latest LAPACK source](http://www.netlib.org/lapack/lapack-3.7.0.tgz).
+
+On an Ubuntu based Linux distros this is not necessary as these libs can be installed via apt-get:
+```bash
+sudo apt-get install libblas-dev liblapack-dev libtmglib-dev
+```
+Hence on Linux the -L flag is not required and the compile statement is simply:
+```bash
+f2py -c cuncsd.pyf cuncsd.f -llapack -lblas -ltmglib
 ```
