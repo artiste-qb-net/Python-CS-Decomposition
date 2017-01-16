@@ -78,6 +78,16 @@ Please note, on Windows we only support 32bit Python 3.4 natively with this modu
 
 Due to limited compile support from Microsoft, 32bit native Windows modules can only be build for older Python versions. No recent Anaconda distribution will work with our modules.  Rather the newest version that we were able to compile for was [Python 3.4.4](https://www.python.org/ftp/python/3.4.4/python-3.4.4.msi) (v3.4.4:737efcadf5a6, Dec 20 2015, 19:28:18) [MSC v.1600 32 bit (Intel)] for win32.
 
+You can start the installation by double clicking on the batch file and a Window should open that prompts you to confirm or enter a path:
+```batch
+C:\Projects\cuncsd-install-script>powershell -ExecutionPolicy ByPass -File .\Install_Py_Module.ps1   & pause
+Found Default Value For Python Install Path:  C:\Python34
+Is this the correct Python install path? [y,n]: n
+Please enter the correct Python install path: C:\Python34_4
+Executing: copy lib\* C:\Python34_4\DLLS
+Executing: copy cuncsd.pyd* C:\Python34_4\DLLS
+Press any key to continue . . .
+```
 ## Troubleshooting and Requirements
 
 ### UNIX like systems
