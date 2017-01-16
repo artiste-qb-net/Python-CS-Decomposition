@@ -1,5 +1,5 @@
 # Python-CS-Decomposition
-This repository contains installer scripts for the binary distribution of the Python CS Decomposition module as contained in LAPACK 3.7.0, as well as build instructions.
+This repository contains installer scripts for the binary distribution of the Python CS Decomposition module as contained in [LAPACK 3.7.0](http://www.netlib.org/lapack/), as well as build instructions.
 
 As described in the netlib.org documentation the _cuncsd_ module computes the CS decomposition of an M-by-M partitioned unitary matrix X:
 ```
@@ -23,7 +23,12 @@ For the purpose of [artiste-qb.net](http://artiste-qb.net) we only require CS de
 
 We compiled a sub-module for this special case with is included in the SQ folder.  I.e. if you want to use this less general CS decomposition, you can import it via SQ.cuncsd in Python after a successfull installation of this module. 
 ```python
->>> import SQ.cuncsd
+>>> import SQ.cuncsd 
+>>> print(SQ.cuncsd.__doc__)
+This module 'cuncsd' is auto-generated with f2py (version:2).
+Functions:
+  x11,x12,x21,x22,theta,u1,u2,v1t,v2t,work,rwork,iwork,info = cuncsd(p,x11,x12,x21,x22,lwork,lrwork,jobu1='Y',jobu2='Y',jobv1t='Y',jobv2t='Y',trans='T',signs='O',m=2*p,q=p,ldx11=p,ldx12=p,ldx21=p,ldx22=p,ldu1=p,ldu2=p,ldv1t=p,ldv2t=p,credit=0)
+.
 ```
 ## Installation
 We plan to bundle this module into a Conda package, but for the time being, the installation is script driven.
