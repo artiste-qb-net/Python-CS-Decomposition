@@ -1,7 +1,7 @@
 # Python-CS-Decomposition
 This repository contains installer scripts for the binary distribution of the Python CS Decomposition module, as well as build instructions.
 
-The binary Python modules as well as required shared libraries for the platforms, and the install scripts are contained in the _DIST_ folder.
+The binary Python modules, required shared libraries for the platforms, and the install scripts are contained in the _DIST_ folder.
 
 To install the module you can simply clone this repository, go to the _DIST_ folder that corresponds to your OS and execute the install script:
 ```bash
