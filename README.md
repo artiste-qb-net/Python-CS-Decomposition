@@ -27,9 +27,11 @@ We compiled a sub-module for this special case which is included in the SQ folde
 >>> print(SQ.cuncsd.__doc__)
 This module 'cuncsd' is auto-generated with f2py (version:2).
 Functions:
-  x11,x12,x21,x22,theta,u1,u2,v1t,v2t,work,rwork,iwork,info = cuncsd(p,x11,x12,x21,x22,lwork,lrwork,jobu1='Y',jobu2='Y',jobv1t='Y',jobv2t='Y',trans='T',signs='O',m=2*p,q=p,ldx11=p,ldx12=p,ldx21=p,ldx22=p,ldu1=p,ldu2=p,ldv1t=p,ldv2t=p,credit=0)
+  x11,x12,x21,x22,theta,u1,u2,v1t,v2t,work,rwork,iwork,info = cuncsd(m,p,q,x11,ldx11,x12,ldx12,x21,ldx21,x22,ldx22,ldu1,ldu2,ldv1t,ldv2t,lwork,lrwork,jobu1='Y',jobu2='Y',jobv1t='Y',jobv2t='Y',trans='T',signs='O',credit=0)
 .
 ```
+You have the 
+
 ## Installation
 We plan to bundle this module into a Conda package, but for the time being, the installation is script driven.
 
