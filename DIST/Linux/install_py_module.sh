@@ -56,7 +56,7 @@ then
 		echo "ERROR: No write permission for $CondaPath/lib/python3.5"
 		exit 1
 	    }
-    cp -R rect $CondaPath/lib/python3.5
+    cp -R SQ $CondaPath/lib/python3.5
     cp $CUNCSDMODULE $CondaPath/lib/python3.5
     [ -w ./lib ] && cp ./lib/* $CondaPath/lib
     echo "**** Successfully installed the cuncsd module to $CondaPath/lib/python3.5 ****"
