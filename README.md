@@ -1,9 +1,9 @@
 # Python-CS-Decomposition
 This repository contains installer scripts for the binary distribution of the Python CS Decomposition module, as well as build instructions.
 
-The binary Python modules as well as required shared libraries for the platforms, and the install scripts are contained in the DIST folder.
+The binary Python modules as well as required shared libraries for the platforms, and the install scripts are contained in the _DIST_ folder.
 
-To install the module you can simply clone this repository, go to the DIST folder that corresponds to your OS and execute the install script:
+To install the module you can simply clone this repository, go to the _DIST_ folder that corresponds to your OS and execute the install script:
 ```bash
 bash-3.2$ cd /tmp
 bash-3.2$ git clone https://github.com/artiste-qb-net/Python-CS-Decomposition.git
@@ -45,6 +45,6 @@ Also unsupported and untested it seems the module can be used with earlier Pytho
 
 Please note on Windows we only support 32bit Python 3.4 natively with this module.  If you have Win 10 you can use a 64bit environment via the Bash for Windows feature as described in [this stackoverflow thread](https://goo.gl/LKSNmd). At the time of writing this feature is no longer restricted by MS to developer previews. ([To enable it see these instructions](https://goo.gl/a1b7vK)).
 
-On the UNIX based platforms we only support and tested the modules with the, as of writting, current Python 3 Anaconda 64bit distribution i.e. Python 3.5.2 |Anaconda 4.2.0 (x86_64). Although we noticed the module also loads with earlier 64bit Anaconda Python 3 versions.
+### License Disclaimer
 
 Please note, the included Fortran files originated with [the LAPACK project](http://www.netlib.org/lapack/) (v3.7.0) and are governed by the license given in the LAPACK_license.txt file.
