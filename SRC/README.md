@@ -18,3 +18,7 @@ Hence on Linux the -L flag is not required and the compile statement is simply:
 ```bash
 f2py -c cuncsd.pyf cuncsd.f -llapack -lblas -ltmglib
 ```
+
+The compilation itself requires gfortran, which is easy to come buy on the Unix Like systems (e.g. via *apt-get* on Ubuntu Linux or [*homebrew*](http://brew.sh/) on OSX).
+
+On Windows you will need to install a 32bit GNU toolchain for instance via [MinGW](http://www.mingw.org/).  
