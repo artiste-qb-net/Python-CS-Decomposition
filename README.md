@@ -107,6 +107,28 @@ The install script will abort if it cannot detect **the required Python 3.5.2 |A
 
 Although unsupported and untested, it seems the module can be used with earlier Python 3 versions.  In this case you can try to copy the _cuncsd-*_ module and contents of the lib folder to a location that is on your python path. Please refer to the [Python documentation](https://docs.python.org/3/library/sys.html#sys.path) to learn how this Path is set and determined.
 
+Depending on you Linux dsitribution you may not have a BLAS library:
+
+```python
+Python 3.5.2 |Anaconda 4.2.0 (64-bit)| (default, Jul  2 2016, 17:53:06) 
+[GCC 4.4.7 20120313 (Red Hat 4.4.7-1)] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import cuncsd
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+ImportError: libblas.so.3: cannot open shared object file: No such file or directory
+>>> 
+```
+If you have a Readhead/CentOS based dsitribution use the yum package manager to install the missing library: 
+
+```bash
+[ec2-user@ip-172-31-28-29 ~]$ sudo yum install libblas```
+```
+On Ubuntu/Debin 
+```
+sudo apt-get install libatlas-base-dev
+```
+
 ### Windows
 
 You will see errors like the following if you enter an non existing install path:
