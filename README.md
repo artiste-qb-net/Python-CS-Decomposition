@@ -124,7 +124,7 @@ If you have a Readhead/CentOS based dsitribution use the yum package manager to 
 ```bash
 [ec2-user@ip-172-31-28-29 ~]$ sudo yum install libblas```
 ```
-On Ubuntu/Debin 
+On Ubuntu/Debian 
 ```
 sudo apt-get install libatlas-base-dev
 ```
