@@ -1,9 +1,9 @@
 #!/bin/bash
 
-# For Linux
+# For OSX
 CUNCSDMODULE=cuncsd.cpython-35m-darwin.so
 
-command -v ls >/dev/null 2>&1 || { printf >&2 "Command line tool 'conda-env' is not available.\nThis modul requires Anaconda Python 3.5.\nPlease check if you have Anaconda Python installed, and on the $PATH variable!\n\n"; exit 1; }
+command conda-env -v ls >/dev/null 2>&1 || { printf >&2 "Command line tool 'conda-env' is not available.\nThis modul requires Anaconda Python 3.5.\nPlease check if you have Anaconda Python installed, and on the \$PATH variable!\n\n"; exit 1; }
 
 
 EXPORTFILE=/tmp/exportfile${RANDOM}
