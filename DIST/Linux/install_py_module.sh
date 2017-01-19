@@ -3,7 +3,7 @@
 # For Linux
 CUNCSDMODULE=cuncsd.cpython-35m-x86_64-linux-gnu.so  
 
-command conda-env -v ls >/dev/null 2>&1 || { printf >&2 "Command line tool 'conda-env' is not available.\nThis modul requires Anaconda Python 3.5.\nPlease check if you have Anaconda Python installed, and on the \$PATH variable!\n\n"; exit 1; }
+command -v conda-env -h ls >/dev/null 2>&1 || { printf >&2 "Command line tool 'conda-env' is not available.\nThis modul requires Anaconda Python 3.5.\nPlease check if you have Anaconda Python installed, and on the \$PATH variable!\n\n"; exit 1; }
 
 
 EXPORTFILE=/tmp/exportfile${RANDOM}
