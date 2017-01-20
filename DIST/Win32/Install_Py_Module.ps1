@@ -56,3 +56,5 @@ WRITE-HOST "Executing: copy lib\*" $DefaultVal"\DLLS"
 copy lib\* $DefaultVal\DLLS
 WRITE-HOST "Executing: copy cuncsd.pyd" $DefaultVal"\DLLS" 
 copy cuncsd.pyd $DefaultVal\DLLS
+WRITE-HOST "Executing: copy SQ\*" $DefaultVal"\DLLS"  
+copy SQ\* $DefaultVal\DLLS
