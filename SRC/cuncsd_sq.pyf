@@ -1,0 +1,46 @@
+!    -*- f90 -*-
+! Note: the context of this file is case sensitive.
+
+python module cuncsd_sq ! in 
+    interface  ! in :cuncsd
+       subroutine cuncsd(jobu1,jobu2,jobv1t,jobv2t,trans,signs,m,p,q,x11,ldx11,x12,ldx12,x21,ldx21,x22,ldx22,theta,u1,ldu1,u2,ldu2,v1t,ldv1t,v2t,ldv2t,work,lwork,rwork,lrwork,iwork,info,credit) ! in :cuncsd:cuncsd.f
+         implicit none
+            character optional,intent(in) :: jobu1='Y'
+            character optional,intent(in) :: jobu2='Y'
+            character optional,intent(in) :: jobv1t='Y'
+            character optional,intent(in) :: jobv2t='Y'
+            character optional,intent(in) :: trans='T'
+            character optional,intent(in) :: signs='O'
+            integer optional,intent(hide), depend(p):: m=2*p
+            integer intent(in) :: p
+            integer optional,intent(hide), depend(p):: q=p
+            complex dimension(p,p),intent(in,out), depend(p) :: x11
+            integer optional,intent(hide),depend(p) :: ldx11=p
+            complex dimension(p,p),intent(in,out), depend(p) :: x12
+            integer optional,intent(hide),depend(p) :: ldx12=p
+            complex dimension(p,p),intent(in,out), depend(p) :: x21
+            integer optional,intent(hide),depend(p) :: ldx21=p
+            complex dimension(p,p),intent(in,out), depend(p) :: x22
+            integer optional,intent(hide),depend(p) :: ldx22=p
+            real dimension(p),intent(out),depend(p) :: theta
+            complex dimension(p,p),intent(out),depend(p) :: u1
+            integer optional,intent(hide),depend(p) :: ldu1=p
+            complex dimension(p,p),intent(out),depend(p) :: u2
+            integer optional,intent(hide),depend(p) :: ldu2=p
+            complex dimension(p,p),intent(out),depend(p) :: v1t
+            integer optional,intent(hide),depend(p) :: ldv1t=p
+            complex dimension(p,p),intent(out),depend(p) :: v2t
+            integer optional,intent(hide),depend(p) :: ldv2t=p
+            complex dimension(abs(lwork)),intent(out),depend(lwork) :: work
+            integer intent(in) :: lwork
+            real dimension(abs(lrwork)),intent(out),depend(lrwork) :: rwork
+            integer intent(in) :: lrwork
+            integer dimension(p),intent(out) :: iwork
+            integer intent(out) :: info
+            integer optional, intent(in) :: credit=0
+        end subroutine cuncsd
+    end interface 
+end python module cuncsd
+
+! This file was auto-generated with f2py (version:2).
+! See http://cens.ioc.ee/projects/f2py2e/
