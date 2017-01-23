@@ -2,7 +2,7 @@
 
 # For OSX
 CUNCSDMODULE=cuncsd.cpython-35m-darwin.so
-
+CUNCSD_SQ_MODULE=cuncsd_sq.cpython-35m-darwin.so
 command -v conda-env -h ls >/dev/null 2>&1 || { printf >&2 "Command line tool 'conda-env' is not available.\nThis modul requires Anaconda Python 3.5.\nPlease check if you have Anaconda Python installed, and on the \$PATH variable!\n\n"; exit 1; }
 
 
@@ -55,8 +55,9 @@ then
 		echo "ERROR: No write permission for $CondaPath/lib/python3.5"
 		exit 1
 	    }
-    cp -R SQ $CondaPath/lib/python3.5
+#    cp -R SQ $CondaPath/lib/python3.5
     cp $CUNCSDMODULE $CondaPath/lib/python3.5
+    cp $CUNCSD_SQ_MODULE $CondaPath/lib/python3.5
     [ -w ./lib ] && cp ./lib/* $CondaPath/lib
-    echo "**** Successfully installed the cuncsd module to $CondaPath/lib/python3.5 ****"
+    echo "**** Successfully installed the cuncsd modules to $CondaPath/lib/python3.5 ****"
 fi
