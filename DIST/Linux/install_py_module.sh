@@ -59,8 +59,8 @@ then
 		exit 1
 	    }
 #    cp -R SQ $CondaPath/lib/python3.5
-    cp $CUNCSDMODULE $CondaPath/lib/python$V
-    cp $CUNCSD_SQ_MODULE $CondaPath/lib/python$V
+    cp $V/* $CondaPath/lib/python$V
+#    cp $V/$CUNCSD_SQ_MODULE $CondaPath/lib/python$V
     [ -w ./lib ] && cp ./lib/* $CondaPath/lib
     echo "**** Successfully installed the cuncsd modules to $CondaPath/lib/python$V ****"
 fi
