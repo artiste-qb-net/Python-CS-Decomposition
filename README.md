@@ -103,7 +103,7 @@ If you get write errors when executing this script check the permissions on your
 ```bash
 >bash-3.2$ sudo ./install_py_module.sh 
 ```
-The install script will abort if it cannot detect **a Python 3.5.2 |Anaconda 4.2.0 (x86_64) or newer environment **.
+The install script will abort if it cannot detect **a Python 3.5.2 |Anaconda 4.2.0 (x86_64) or newer environment ***.
 
 Although unsupported and untested, it seems the module can be used with earlier Python 3 versions.  In this case you can try to copy the _cuncsd-*_ module and contents of the lib folder to a location that is on your python path. Please refer to the [Python documentation](https://docs.python.org/3/library/sys.html#sys.path) to learn how this Path is set and determined.
 
