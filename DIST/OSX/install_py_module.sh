@@ -3,7 +3,7 @@
 # For OSX
 CUNCSDMODULE=cuncsd.cpython-35m-darwin.so
 CUNCSD_SQ_MODULE=cuncsd_sq.cpython-35m-darwin.so
-command -v conda-env -h ls >/dev/null 2>&1 || { printf >&2 "Command line tool 'conda-env' is not available.\nThis modul requires Anaconda Python 3.5.\nPlease check if you have Anaconda Python installed, and on the \$PATH variable!\n\n"; exit 1; }
+command -v conda-env -h ls >/dev/null 2>&1 || { printf >&2 "Command line tool 'conda-env' is not available.\nThis modul requires Anaconda Python 3.5 or newer.\nPlease check if you have Anaconda Python installed, and on the \$PATH variable!\n\n"; exit 1; }
 
 
 EXPORTFILE=/tmp/exportfile${RANDOM}
@@ -44,20 +44,23 @@ then
 	exit 1;
     fi
     FullPyVersion=$(($CondaPath/bin/python -V) 2>&1)
-    PyVStr=${FullPyVersion%:: *} 
+    PyVStr=${FullPyVersion%:: *}
+    V="3.5"
     if [ "$PyVStr" == "Python 3.5.2 " ]; then 
        echo "Found matching $PyVStr."
     else
        echo "WARNING: This module has only been tested with Anaconda Python 3.5.2 but detected $PyVStr(!)"
+       V=${PyVStr:7:3}
+       echo "Python Version set to $V"
     fi
-    [ -w $CondaPath/lib/python3.5 ] && echo "Confirmed that $CondaPath/lib/python3.5 is writeable." ||
+    [ -w $CondaPath/lib/python$V ] && echo "Confirmed that $CondaPath/lib/python$V is writeable." ||
 	    {
-		echo "ERROR: No write permission for $CondaPath/lib/python3.5"
+		echo "ERROR: No write permission for $CondaPath/lib/python$V"
 		exit 1
 	    }
-#    cp -R SQ $CondaPath/lib/python3.5
-    cp $CUNCSDMODULE $CondaPath/lib/python3.5
-    cp $CUNCSD_SQ_MODULE $CondaPath/lib/python3.5
+#    cp -R SQ $CondaPath/lib/python$V
+    cp $V/* $CondaPath/lib/python$V
+    cp $V/* $CondaPath/lib/python$V
     [ -w ./lib ] && cp ./lib/* $CondaPath/lib
-    echo "**** Successfully installed the cuncsd modules to $CondaPath/lib/python3.5 ****"
+    echo "**** Successfully installed the cuncsd modules to $CondaPath/lib/python$V ****"
 fi
