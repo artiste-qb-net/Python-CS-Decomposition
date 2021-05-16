@@ -25,7 +25,7 @@ conda-env list | {
   exit 1;
 }
 CondaPath=$(cat $EXPORTFILE)
-if [[ $1 != "-s"  ]]
+if [[ $1 != "-s"  ]]; then
 	read -p "Found Anaconda Python install path '$CondaPath'. Is this correct? [Y|n]" -n 1 -r
 else
 	echo "Using Anaconda Python install path '$CondaPath'."
